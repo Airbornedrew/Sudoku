@@ -645,11 +645,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/diffBtn"
         style="@style/buttons"/>
-    
-            <Button
+    <Button
         android:id="@+id/diffBtn"
         android:text="@string/setDiff"
-        app:layout_constraintBottom_toTopOf="@+id/LeaderBoard"
+        app:layout_constraintBottom_toTopOf="@+id/colorBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBtn"
