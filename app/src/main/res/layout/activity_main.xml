@@ -646,22 +646,21 @@
         app:layout_constraintBottom_toTopOf="@+id/diffBtn"
         style="@style/buttons"/>
 
-    <Button
-        android:id="@+id/diffBtn"
-        android:text="@string/setDiff"
-        app:layout_constraintBottom_toTopOf="@+id/colorBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBtn"
-        style="@style/buttons"/>
-
-    <Button
+   <Button
         android:id="@+id/colorBtn"
         android:text="@string/choose"
-        app:layout_constraintBottom_toTopOf="@+id/condition"
+        app:layout_constraintBottom_toTopOf="@+id/LeaderBoard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/diffBtn"
+        style="@style/buttons"/>
+    <Button
+        android:id="@+id/LeaderBoard"
+        android:text="@string/Score"
+        app:layout_constraintBottom_toTopOf="@+id/condition"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorBtn"
         style="@style/buttons"/>
 
     <TextView
