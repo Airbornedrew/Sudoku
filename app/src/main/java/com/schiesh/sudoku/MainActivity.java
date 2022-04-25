@@ -7,7 +7,6 @@ import android.graphics.drawable.LayerDrawable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Chronometer;
@@ -261,7 +260,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         //connects to button to change the color of the buttons
         final Button colorChange = findViewById(R.id.colorBtn);
         colorChange.setOnClickListener(new View.OnClickListener() {
@@ -269,7 +267,19 @@ public class MainActivity extends AppCompatActivity {
                 onChangeColorClick();
             }
         });
+
+
+        //-----------------------------------------------------------------------------------------
+        //connects to button to open leaderboard
+        final Button LeaderBoard = findViewById(R.id.LeaderBoard);
+        LeaderBoard.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View View){
+                openLeaderBoard(); }
+        });
+        //-----------------------------------------------------------------------------------------
     }
+
+
 
     //switches to GameDifficulty class and returns intent
     private void switchActivities() {
@@ -282,8 +292,14 @@ public class MainActivity extends AppCompatActivity {
         Intent switchColorIntent = new Intent(this, ColorChange.class);
         startActivity(switchColorIntent);
     }
+    //---------------------------------------------------------------------------------------------
+    //switches to LeaderBoard class and returns intent
+    public void openLeaderBoard() {
+        Intent openLeaderBoardIntent = new Intent(this, LeaderBoard.class);
+        startActivity(openLeaderBoardIntent);
+    }
+    //---------------------------------------------------------------------------------------------
 
-    //fill grid with values and empty cells
     public void fillGrid(Sudoku sudoku) {
         int btnInt = 0;
         for (int i = 0; i<9; i++){
