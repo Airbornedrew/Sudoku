@@ -13,4 +13,7 @@
     <string name="choose">Button color</string>
     <string name="choose_color">Choose a color</string>
     <string name="color">My color</string>
+    <string name="PlayerName">Player Name</string>
+    <string name="PlayerTime">Player Time</string>
+    <string name="Score">LeaderBoard</string>
 </resources>
