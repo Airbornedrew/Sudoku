@@ -252,6 +252,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        
         //connects to button to change the difficulty
         final Button difficulty = findViewById(R.id.diffBtn);
         difficulty.setOnClickListener(new View.OnClickListener() {
@@ -259,6 +260,7 @@ public class MainActivity extends AppCompatActivity {
                 switchActivities();
             }
         });
+
 
         //connects to button to change the color of the buttons
         final Button colorChange = findViewById(R.id.colorBtn);
@@ -268,19 +270,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         //-----------------------------------------------------------------------------------------
         //connects to button to open leaderboard
         final Button LeaderBoard = findViewById(R.id.LeaderBoard);
         LeaderBoard.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View View){
-                openLeaderBoard(); }
+            public void onClick(View View) {
+                openLeaderBoard();
+            }
         });
-        //-----------------------------------------------------------------------------------------
     }
-
-
-
+    
     //switches to GameDifficulty class and returns intent
     private void switchActivities() {
         Intent switchActivityIntent = new Intent(this, GameDifficulty.class);
@@ -292,13 +291,14 @@ public class MainActivity extends AppCompatActivity {
         Intent switchColorIntent = new Intent(this, ColorChange.class);
         startActivity(switchColorIntent);
     }
-    //---------------------------------------------------------------------------------------------
-    //switches to LeaderBoard class and returns intent
-    public void openLeaderBoard() {
-        Intent openLeaderBoardIntent = new Intent(this, LeaderBoard.class);
-        startActivity(openLeaderBoardIntent);
-    }
-    //---------------------------------------------------------------------------------------------
+
+        //---------------------------------------------------------------------------------------------
+        //switches to LeaderBoard class and returns intent
+        public void openLeaderBoard() {
+            Intent openLeaderBoardIntent = new Intent(this, LeaderBoard.class);
+            startActivity(openLeaderBoardIntent);
+        }
+        //---------------------------------------------------------------------------------------------
 
     public void fillGrid(Sudoku sudoku) {
         int btnInt = 0;
